@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil</title>
+</head>
+<body>
+    
+    <h1>Perfil de {{lista[0][2]}} {{lista[0][3]}}</h1>
+    <br>
+    <table>
+        <tr>
+            <td><h2>Asignaturas</h2></td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+            <td>
+                <button type="button"><a href="/eliminar_est/{{lista[0][0]}}/">
+                    Desmatricular Estudiante
+                </a></button>
+            </td>
+            <td>
+                <button type="button"><a href="/">Regresar a Inicio</a></button>
+            </td>
+        </tr>
+    </table>
+    <table>
+        <thead>
+            <tr>
+                <td>Nota 1</td>
+                <td>Nota 2</td>
+                <td>Nota 3</td>
+                <td>Promedio</td>
+                <td>Codigo</td>
+                <td>Nombre Asignatura</td>
+                <td>Eliminar</td>
+            </tr>
+        </thead>
+          <tbody>
+              {% for row in lista_plan %}
+              <tr>
+                  <td>{{row[0]}}</td>
+                  <td>{{row[1]}}</td>
+                  <td>{{row[2]}}</td>
+                  <td>{{row[3]}}</td>
+                  <td>{{row[6]}}</td>
+                  <td>{{row[7]}}</td>
+                  <td>
+                      <button type="button">
+                          <a href="/eliminar_pl/{{row[5]}}/{{row[4]}}/">Eliminar</a>
+                      </button>
+                  </td>
+              </tr>
+              {% endfor %}
+          </tbody>
+    </table>
+    {% if message %}
+        <script>alert('Desmatriculado de Asignatura')</script>
+    {% endif %}
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscribir</title>
+</head>
+<body>
+    <form method="post">
+    <table>
+        <tr>
+            <td>
+                <select name="asignatura" id="asignatura">
+                    <option >Seleccionar Asignatura</option>
+                    {% for row in lista_as %}
+                        <option value="{{row[0]}}">{{row[2]}}</option>
+                    {% endfor %}
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td><input type="number" step="0.01" name="nota1" id="nota1" required placeholder="Insertar Nota 1"></td>
+            <td><input type="number" step="0.01" name="nota2" id="nota2" required placeholder="Insertar Nota 2"></td>
+            <td><input type="number" step="0.01" name="nota3" id="nota3" required placeholder="Insertar Nota 3"></td>
+        </tr>
+        <tr>
+            <td>
+                <button type="submit">Guardar</button>
+            </td>
+            <td>
+                <button type="button"><a href="/">Regresar a Inicio</a></button>
+            </td>
+        </tr>
+    </table>
+    {% if message %}
+        <h2>{{message}}</h2>
+    {% endif %}
+</form>
+
+</body>
+</html>

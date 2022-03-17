@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilo.css') }}">
+    <title>Crud_Notas</title>
+</head>
+<body>
+    <h1><span class="blue">&lt;</span>Producto CRUD<span class="blue">&gt;</span> <span class="yellow">Sistemas de informacion</pan>
+    </h1>
+    <h2>Autores: Juan Naranjo, Samuel Bolivar, Daniel Pinzon</a></h2>
+
+    <table class="container">
+        <thead>
+            <tr>
+                <th>
+                    <h1>ID</h1>
+                </th>
+                <th>
+                    <h1>CODIGO</h1>
+                </th>
+                <th>
+                    <h1>NOMBRE</h1>
+                </th>
+                <th>
+                    <h1>APELLIDO</h1>
+                </th>
+                <th>
+                    <h1>EDITAR</h1>
+                </th>
+                <th>
+                    <h1>INFORMACION</h1>
+                </th>
+                <th>
+                    <h1>INSCRIBIR</h1>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for reg in lista_est %}
+            <tr>
+                <td>12</td>
+                <td>201811294706</td>
+                <td>Juan Camilo</td>
+                <td>Naranjo Mejía</td>
+                <td class="editar" id="editar"><a href="/editar/{{reg[0]}}" id="editlink">Editar</a></td>
+                <td class="info" id="info"><a href="/perfil/{{reg[0]}}/" id="infolink">Informacion</a></td>
+                <td class="inscribir" id="inscribir"><a href="/inscribir/{{reg[0]}}/" id="inscribirlink">Inscribir</a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <script src="{{ url_for('static', filename='js/dinamic.js') }}"></script>
+</body>
+</html>
