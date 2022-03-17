@@ -108,7 +108,7 @@ h2 a {
     background-color: #00b8c5;
     font-weight: bold;
     
-    box-shadow: #001fcf -1px 1px, #001fcf -2px 2px, #001fcf -3px 3px, #001fcf -4px 4px, #001fcf -5px 5px, #001fcf -6px 6px;
+    box-shadow: #007592 -1px 1px, #007592 -2px 2px, #007592 -3px 3px, #007592 -4px 4px, #007592 -5px 5px, #007592 -6px 6px;
     transform: translate3d(6px, -6px, 0);
     
     transition-delay: 0s;
@@ -122,6 +122,19 @@ h2 a {
     font-weight: bold;
     
     box-shadow: #00882d -1px 1px, #00882d -2px 2px, #00882d -3px 3px, #00882d -4px 4px, #00882d -5px 5px, #001fcf -6px 6px;
+    transform: translate3d(6px, -6px, 0);
+    
+    transition-delay: 0s;
+    transition-duration: 0.4s;
+    transition-property: all;
+    transition-timing-function: line;
+}
+
+.container .info:hover {
+    background-color: #ff32e4;
+    font-weight: bold;
+    
+    box-shadow: #6b0066 -1px 1px, #6b0066 -2px 2px, #6b0066 -3px 3px, #6b0066 -4px 4px, #6b0066 -5px 5px, #6b0066 -6px 6px;
     transform: translate3d(6px, -6px, 0);
     
     transition-delay: 0s;
