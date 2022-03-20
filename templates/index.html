@@ -41,10 +41,10 @@
         <tbody>
             {% for reg in lista_est %}
             <tr>
-                <td>12</td>
-                <td>201811294706</td>
-                <td>Juan Camilo</td>
-                <td>Naranjo Mejía</td>
+                <td>{{reg[0]}}</td>
+                <td>{{reg[1]}}</td>
+                <td>{{reg[2]}}</td>
+                <td>{{reg[3]}}</td>
                 <td class="editar" id="editar"><a href="/editar/{{reg[0]}}" id="editlink">Editar</a></td>
                 <td class="info" id="info"><a href="/perfil/{{reg[0]}}/" id="infolink">Informacion</a></td>
                 <td class="inscribir" id="inscribir"><a href="/inscribir/{{reg[0]}}/" id="inscribirlink">Inscribir</a></td>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auditoria Plan Estudios</title>
+</head>
+<body>
+    <h2>
+        <button type="button">
+            <a href="/">Regresar a Inicio</a>
+        </button>
+    </h2>
+   <table>
+       <thead>
+           <tr>
+               <td>Fecha</td>
+               <td>Hora</td>
+               <td>Usuario</td>
+               <td>operacion</td>
+           </tr>
+       </thead>
+       <tbody>
+           {% for row in lista_aud %}
+           <tr>
+               <td>{{row[0]}}</td>
+               <td>{{row[1]}}</td>
+               <td>{{row[2]}}</td>
+               <td>{{row[3]}}</td>
+           </tr>
+           {% endfor %}
+       </tbody>
+   </table> 
+</body>
+</html>

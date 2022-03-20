@@ -2,9 +2,9 @@ import psycopg2
 import psycopg2.extras
 
 DB_HOST = 'localhost'
-DB_NAME = 'proyecto'
+DB_NAME = 'proyecto3'
 DB_USER = 'postgres'
-DB_PASS = '12345678'
+DB_PASS = 'conexion'
 
 conn = psycopg2.connect(dbname = DB_NAME,user = DB_USER,password = DB_PASS,host = DB_HOST)
 cur = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
@@ -70,3 +70,9 @@ class conexion:
         cur.execute(con)
         lista = cur.fetchall()
         return lista  
+
+    def lista_auditoria():
+        con = "select * from lista_auditoria()"
+        cur.execute(con)
+        lista = cur.fetchall()
+        return lista    

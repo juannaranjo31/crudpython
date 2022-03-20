@@ -5,9 +5,8 @@ app =  Flask(__name__)
 
 @app.route('/')
 def index():
-    lista_asig = dbpg.conexion.listar_asignatura()
     lista_est = dbpg.conexion.lista_estudiante()
-    return render_template('index.html',lista_as = lista_asig,lista_est = lista_est)
+    return render_template('index.html',lista_est = lista_est)
 
 @app.route('/nuevo_estudiante/',methods=['GET','POST'])
 def nuevo_estudiante():
@@ -82,6 +81,11 @@ def eliminar(idest,idasig):
 def eliminar_est(id):
     dbpg.conexion.eliminar_estudiante(id)
     return redirect('/')
+
+@app.route('/lista_auditoria/')
+def auditoria():
+    lista = dbpg.conexion.lista_auditoria()  
+    return render_template('auditoria.html',lista_aud = lista)  
 
 if __name__ == '__main__':
     app.run(debug=True,port=4000)
