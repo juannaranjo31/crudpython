@@ -1,0 +1,117 @@
+@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  line-height: 1.42em;
+  background: #0f0c29;
+  background: -webkit-linear-gradient(
+    to right,
+    #24243e,
+    #302b63,
+    #0f0c29
+  );
+  background: linear-gradient(
+    to right,
+    #24243e,
+    #302b63,
+    #0f0c29
+  );
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.form {
+  background-color: #2c2a83;
+  border: solid 0.5px #fff842;
+  height: 33rem;
+  width: 27rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  border-radius: 27px;
+}
+
+.form-input {
+  background-color: #504ed3;
+  width: 100%;
+  height: 3rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  border: solid 0.5px #fff842;
+  padding-left: 1rem;
+  color: #fff;
+}
+
+.form-input::placeholder {
+  color: #f3f3f3;
+}
+
+h1.title {
+  font-size: 2em;
+  font-weight: 500;
+  line-height: 1em;
+  text-align: center;
+  color: #4dc3fa;
+  margin-bottom: 2rem;
+}
+
+.form-button {
+  font-family: "Open Sans", sans-serif;
+  background-color: #3966ce;
+  color: #fff;
+  border: solid 0.5px #fff842;
+  width: 70%;
+  height: 2rem;
+  border-radius: 10px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  font-size: 1.1em;
+}
+
+.form-button:hover {
+  background-color: #1149cc;
+  border: solid 0.5px #4dff21;
+  cursor: pointer;
+}
+
+.main-button {
+  font-family: "Open Sans", sans-serif;
+  background-color: #3ec095;
+  color: #ffffff;
+  border: solid 0.5px #fff842;
+  width: 70%;
+  height: 2rem;
+  border-radius: 10px;
+  margin-bottom: 5px;
+  font-size: 1.1em;
+}
+
+.main-button:hover {
+  background-color: #287a5f;
+  border: solid 0.5px #4dff21;
+  cursor: pointer;
+}
+
+.main-button a {
+  text-decoration: none;
+  color: #fff;
+}

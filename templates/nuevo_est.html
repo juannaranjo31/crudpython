@@ -1,41 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/new_est.css') }}">
     <title>Document</title>
-</head>
-<body>
-    <h1>Registro de Nuevo estudiante</h1>
-    <form action="" method="post">
-        <table>
-            <td>
-                <input type="text" name="nombre" id="nombre" placeholder="Ingrese Nombre" required>
-            </td>
-            <td>
-                <input type="text" name="apellido" id="apellido" placeholder="ingrese Apellido" required>
-            </td>
-        </table>
-        <table>
-            <td>
-                <input type="text" name="codigo" id="codigo" placeholder="Ingrese Codigo del Estudiante" required>
-            </td>
-            <td>
-                <input type="number" name="edad" id="edad" placeholder="Ingrese edad del Estudiante" min="17" required>
-            </td>
-        </table>
-        <table>
-            <td>
-                <button type="submit">Guardar Datos</button>
-            </td>
-            <td>
-                <button type="button"><a href="/">Regresar a Inicio</a></button>
-            </td>
-        </table>
-    </form> 
+  </head>
+  <body>
+
+    <div class="container">
+        <h1 class="title">Registro de Nuevo estudiante</h1>
+    <form class="form" action="" method="post">
+      <input
+        type="text"
+        name="nombre"
+        id="nombre"
+        placeholder="Ingrese Nombre"
+        required
+        class="form-input"
+      />
+
+      <input
+        type="text"
+        name="apellido"
+        id="apellido"
+        placeholder="Ingrese Apellido"
+        required
+        class="form-input"
+      />
+
+      <input
+        type="text"
+        name="codigo"
+        id="codigo"
+        placeholder="Ingrese Codigo del Estudiante"
+        required
+        class="form-input"
+      />
+
+      <input
+        type="number"
+        name="edad"
+        id="edad"
+        placeholder="Ingrese edad del Estudiante"
+        min="17"
+        required
+        class="form-input"
+      />
+
+      <button class="form-button" type="submit">Guardar Datos</button>
+
+      <button class="main-button" type="button"><a href="/">Regresar a Inicio</a></button>
+    </form>
     {% if mensaje %}
-        <script>alert('Este estudiante ya esta registrado')</script>
+    <script>
+      alert("Este estudiante ya esta registrado");
+    </script>
     {% endif %}
-</body>
+    </div>
+    
+  </body>
 </html>

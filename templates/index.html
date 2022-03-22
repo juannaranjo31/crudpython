@@ -5,11 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/estilo.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/navbar.css') }}">
     <title>Crud_Notas</title>
 </head>
 <body>
-    <h1><span class="blue">&lt;</span>Producto CRUD<span class="blue">&gt;</span> <span class="yellow">Sistemas de informacion</pan>
-    </h1>
+    <nav>
+        <div class="navbar">
+            <div class="brand">
+                <h1>Crud</h1>
+            </div>
+
+            <ul class="menu">
+                <li class="menu-item">Inicio</li>
+                <li class="menu-item"><a href="./nuevo_estudiante">Registrar estudiante</a></li>
+            </ul>
+        </div>
+    </nav>
     <h2>Autores: Juan Naranjo, Samuel Bolivar, Daniel Pinzon</a></h2>
 
     <table class="container">

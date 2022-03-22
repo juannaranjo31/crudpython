@@ -2,9 +2,9 @@ import psycopg2
 import psycopg2.extras
 
 DB_HOST = 'localhost'
-DB_NAME = 'proyecto3'
+DB_NAME = 'proyecto'
 DB_USER = 'postgres'
-DB_PASS = 'conexion'
+DB_PASS = '12345678'
 
 conn = psycopg2.connect(dbname = DB_NAME,user = DB_USER,password = DB_PASS,host = DB_HOST)
 cur = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
