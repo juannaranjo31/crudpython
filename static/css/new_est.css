@@ -115,3 +115,8 @@ h1.title {
   text-decoration: none;
   color: #fff;
 }
+
+.success-message{
+  color: #4dff21;
+  font-size: 1em;
+}

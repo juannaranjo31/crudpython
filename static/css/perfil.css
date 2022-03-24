@@ -1,0 +1,57 @@
+.form-button {
+    font-family: "Open Sans", sans-serif;
+    background-color: #3966ce;
+    color: #fff;
+    border: solid 0.5px #fff842;
+    width: 70%;
+    height: 2rem;
+    border-radius: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+  }
+  
+  .form-button:hover {
+    background-color: #1149cc;
+    border: solid 0.5px #4dff21;
+    cursor: pointer;
+  }
+
+  .form-button a{
+      text-decoration: none;
+      color: #fff;
+  }
+  
+  .main-button {
+    font-family: "Open Sans", sans-serif;
+    background-color: #3ec095;
+    color: #ffffff;
+    border: solid 0.5px #fff842;
+    width: 70%;
+    height: 2rem;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    font-size: 1.1em;
+  }
+  
+  .main-button:hover {
+    background-color: #287a5f;
+    border: solid 0.5px #4dff21;
+    cursor: pointer;
+  }
+  
+  .main-button a {
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  .success-message{
+    color: #4dff21;
+    font-size: 1em;
+  }
+
+  .delete-button{
+      background-color: #ff1e1e;
+      color: #fff;
+      padding: 0 1rem 0 1rem;
+  }

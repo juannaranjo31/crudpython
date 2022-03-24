@@ -1,36 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Auditoria Plan Estudios</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilo.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/navbar.css') }}">
 </head>
+
 <body>
-    <h2>
-        <button type="button">
-            <a href="/">Regresar a Inicio</a>
-        </button>
-    </h2>
-   <table>
-       <thead>
-           <tr>
-               <td>Fecha</td>
-               <td>Hora</td>
-               <td>Usuario</td>
-               <td>operacion</td>
-           </tr>
-       </thead>
-       <tbody>
-           {% for row in lista_aud %}
-           <tr>
-               <td>{{row[0]}}</td>
-               <td>{{row[1]}}</td>
-               <td>{{row[2]}}</td>
-               <td>{{row[3]}}</td>
-           </tr>
-           {% endfor %}
-       </tbody>
-   </table> 
+
+    <nav>
+        <div class="navbar">
+            <div class="brand">
+                <h1>Crud</h1>
+            </div>
+
+            <ul class="menu">
+                <li class="menu-item"><a href="/">Inicio</a></li>
+                <li class="menu-item"><a href="/nuevo_estudiante">Registrar estudiante</a></li>
+                <li class="menu-item"><a href="/lista_auditoria/">Tabla Auditoria</a></li>
+            </ul>
+        </div>
+    </nav>
+    <h2>Autores: Juan Naranjo, Samuel Bolivar, Daniel Pinzon</a></h2>
+
+    <table class="container">
+        <thead>
+            <tr>
+                <td style="width: 10rem;">Fecha</td>
+                <td>Hora</td>
+                <td>Usuario</td>
+                <td>operacion</td>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in lista_aud %}
+            <tr>
+                <td>{{row[0]}}</td>
+                <td>{{row[1]}}</td>
+                <td>{{row[2]}}</td>
+                <td>{{row[3]}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
 </body>
+
 </html>

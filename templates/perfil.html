@@ -5,28 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perfil</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilo.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/navbar.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/perfil.css') }}">
 </head>
 <body>
     
     <h1>Perfil de {{lista[0][2]}} {{lista[0][3]}}</h1>
-    <br>
-    <table>
-        <tr>
-            <td><h2>Asignaturas</h2></td>
-            <td><br></td>
-            <td><br></td>
-            <td><br></td>
-            <td>
-                <button type="button"><a href="/eliminar_est/{{lista[0][0]}}/">
+    <div style="padding-left: 12rem; padding-right: 12rem; width: 100%; display: flex; justify-content: center; align-items: center;">
+                <button style="margin: 3rem;" class="form-button" type="button"><a href="/eliminar_est/{{lista[0][0]}}/">
                     Desmatricular Estudiante
                 </a></button>
-            </td>
-            <td>
-                <button type="button"><a href="/">Regresar a Inicio</a></button>
-            </td>
-        </tr>
-    </table>
-    <table>
+                <button class="main-button" type="button"><a href="/">Regresar a Inicio</a></button>
+    </div>
+
+    <table class="container">
         <thead>
             <tr>
                 <td>Nota 1</td>
@@ -48,7 +41,7 @@
                   <td>{{row[6]}}</td>
                   <td>{{row[7]}}</td>
                   <td>
-                      <button type="button">
+                      <button class="delete-button" type="button">
                           <a href="/eliminar_pl/{{row[5]}}/{{row[4]}}/">Eliminar</a>
                       </button>
                   </td>
